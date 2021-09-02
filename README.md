@@ -44,4 +44,4 @@ O dogma central do desenvolvimento Web
 
 --------------------------------------------------------------------------------------------------------------------------------------------
 
-![Mulher_na_TI](https://github.com/Luciara-Abreu/PHP/blob/main/nerd%20mulher.jpg)
+![Mulher_na_TI](https://github.com/Luciara-Abreu/Aulas_PHP/blob/main/IMAGENS/php.jpg)
