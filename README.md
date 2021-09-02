@@ -45,3 +45,4 @@ O dogma central do desenvolvimento Web
 --------------------------------------------------------------------------------------------------------------------------------------------
 
 ![Mulher_na_TI](https://github.com/Luciara-Abreu/Aulas_PHP/blob/main/IMAGENS/php.jpg)
+![PHP_BACK_END](https://github.com/Luciara-Abreu/Aulas_PHP/blob/main/IMAGENS/back%20e%20front%20php.jpg)
