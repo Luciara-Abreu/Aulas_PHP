@@ -13,7 +13,14 @@ session_start();
     <meta name = "description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+<style type="text/css">
+    body {
+    background-color: #cebbb5;
+    text-align: center;
+    margin-top: 10%;
+    }
 
+</style
 <body>
     <p>FORMULÁRIO PARA INSCRIÇÃO DE COMPETIDORES</P>
     
