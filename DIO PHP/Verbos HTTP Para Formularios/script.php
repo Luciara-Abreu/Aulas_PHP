@@ -26,34 +26,35 @@ $idade = $_POST['idade'];
 //empty verifica se a variável está vazia
 if(empty($nome))
 {
-    $_SESSION ['mensagem-de-erro'] = 'O nome não pode ser vazio, por favor preencha novamente <br/>';
-    //header( String 'location: index.php'); Da maneira ensinada pelo prof da erro acho que houve atualização no PHP
-    header( 'location: index.php');
- 
-}
+    $_SESSION ['mensagem-de-erro'] = 'O nome não pode ser vazio, por favor preencha novamente <br />';
+    header('location: index.php');
+    return;
 
+}
 //strlen conta a quantidade de caracteres
 //Esse código evita a possibilidade de invasão... 
-if(strlen($nome) < 3 )
+else if(strlen($nome) < 3 )
 {
     $_SESSION ['mensagem-de-erro'] = 'Nome deve ter de 3 caracteres <br />';
     header( 'location: index.php');
-
+    return;
 }
 
-if(strlen($nome) > 20 )
+else if(strlen($nome) > 20 )
 {
 
     $_SESSION ['mensagem-de-erro'] = 'Nome deve ter até 40 caracteres <br />';
     header( 'location: index.php');
+    return;
 }
 
 //is_numeric verifica se a string é um valor numerico.
-if(!is_numeric($idade))
+else if(!is_numeric($idade))
 {
     
     $_SESSION ['mensagem-de-erro'] = 'Digite a sua idade <br />';
     header( 'location: index.php');
+    return;
 
 }
 
@@ -72,7 +73,12 @@ if ($idade >= 6 && $idade <= 12)
     for ($i = 0; $i < count($categorias); $i++) 
     {
         if ($categorias[$i]== 'infantil')
-            echo "O nadador ". $nome. " compete na modalidade infantil";
+        {
+            $_SESSION['mensagem-sucesso'] = "O nadador ". $nome. " compete na modalidade infantil <br/>";
+            header( 'location: index.php');
+            return;
+        }
+        
     }
 }else if ($idade >= 13 && $idade <= 18) 
 {
@@ -80,7 +86,12 @@ if ($idade >= 6 && $idade <= 12)
     for ($i = 0; $i < count($categorias); $i++) 
     {
         if ($categorias[$i]== 'adolescente')
-            echo "O nadador ". $nome. " compete na modalidade adolescente";
+        {
+            $_SESSION['mensagem-sucesso'] = "O nadador ". $nome. " compete na modalidade adolescente <br/>";
+            header( 'location: index.php');
+            return;
+        }
+            
     }
 }else if ($idade >= 18 && $idade <= 40) 
 {
@@ -88,11 +99,19 @@ if ($idade >= 6 && $idade <= 12)
     for ($i = 0; $i < count($categorias); $i++) 
     {
         if ($categorias[$i]== 'adolescente')
-            echo "O nadador ". $nome. " compete na modalidade adulta";
+        {
+            $_SESSION['mensagem-sucesso'] = "O nadador ". $nome. " compete na modalidade adulta <br/>";
+            header( 'location: index.php');
+            return;
+        }
+            
     }
 }else
 {
-    echo " $nome Sem modalidade cadastrada.";
+
+    $_SESSION['mensagem-sucesso'] = " $nome Sem modalidade cadastrada <br/>";
+    header( 'location: index.php');
+    return;
 }
 
 

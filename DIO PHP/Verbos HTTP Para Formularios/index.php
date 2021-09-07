@@ -19,12 +19,22 @@ session_start();
     
 <form action="script.php" method="post">
     <?php
-    $mensagemDeErro = isset($_SESSION ['mensagem-de-erro'])? $_SESSION ['mensagem-de-erro'] : '';
-    if(!empty($mensagemDeErro))
+    //isset verifica se a variável foi definida ou ela serve para saber se uma variável existe.
+    $mensagemDeErro = isset($_SESSION ['mensagem-de-erro'])? $_SESSION ['mensagem-de-erro'] : ''; // ternário => (condição /expressão 1) ?: expressão 2
+    if(!empty($mensagemDeErro))//se mensagem de erro não estiver vazia... 
     {
-        echo $mensagemDeErro;
+        echo $mensagemDeErro; // mostra o erro // O Professor disse dois pontos .. só que é ponto e virgula
+    }
+
+
+    // Mensagem de sucesso no nosso front-end!! 
+    $mensagemDeSucesso = isset($_SESSION ['mensagem-sucesso'])? $_SESSION ['mensagem-sucesso'] : ''; // ternário => (condição /expressão 1) ?: expressão 2
+    if(!empty($mensagemDeSucesso))//se mensagem de erro não estiver vazia... 
+    {
+        echo $mensagemDeSucesso; // mostra o erro // O Professor disse dois pontos .. só que é ponto e virgula
     }
     ?>
+    
     <p>Seu nome: <input type="text" name="nome" /></p>
     <p>Sua idade: <input type="text" name="idade" /></p>
     <p><input type="submit" value="Enviar dados do competidor" /></p>
