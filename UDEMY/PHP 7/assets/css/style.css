@@ -1,0 +1,157 @@
+* {
+    font-family: 'Amiri', 'sans-serif';
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    margin: 0px;
+    display: grid; /*Aqui digo que vou usar css grid dentro da página*/
+    grid-template-rows: 120px 1fr 60px;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+            "cabecalho"
+            "principal"
+            "rodape";
+}
+
+.cabecalho {
+    grid-area: cabecalho;
+    /* background-color: #1867c7;*/
+    background-color: #a716f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    z-index: 1; /*Para poder aparecer o shaadow abaixo*/
+    box-shadow: 0px 6px 15px 0px #000000;    
+}
+
+.cabecalho > h1{
+    margin: 0px;
+    font-weight: 300;
+    font-size: 2.8rem;
+}
+
+.cabecalho > h2{
+    margin: 0px;
+    font-weight: 200;
+    font-size: 1.6rem;
+}
+
+.principal {
+    grid-area: principal;
+    height: calc(100vh - 180px);
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.conteudo {
+    position: relative;
+    height: 100%;
+    overflow: scroll;
+    background-color: #ffff;
+    padding: 20px;
+    box-shadow: 0px -6px 19px -7px #797373;
+}
+
+.rodape {
+    grid-area: rodape;
+    background: rgba(166, 131, 221, 0.494);
+    display: flex;
+    justify-content: flex-end;  
+    align-items: center;
+    -webkit-box-shadow: -6px -7px 28px -7px #000000; 
+    -webkit-box-shadow: 0px -6px 19px -7px #000000; 
+    box-shadow: 0px -6px 19px -7px #797373;
+}
+
+.modulos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.modulo{
+    flex-basis: 32%;
+    margin-bottom: 10px;
+    border-radius: 1%;
+}
+
+.modulo > h3 {
+    margin: 0px;
+    color: rgb(55, 41, 41);
+    font-weight: 300;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    background-color:odape;
+    background: rgba(166, 131, 221, 0.494);
+}
+
+.modulo > ul{
+    margin: 0px;
+    padding: 10px;
+    list-style: none;
+}
+
+.modulo > ul > li {
+padding: 3px;
+font-size: 1.2rem;
+cursor: pointer;
+}
+
+.modulo > ul > li > a {
+    display: flex;
+    text-decoration: none;
+    color: rgb(49, 49, 49);
+}
+.modulo > ul > li:hover {
+    background-color: #EEE;
+}
+
+/*modulo 1*/
+.modulo.vermelho {border: 2px solid  #d50404fc;}
+.modulo.vermelho > h3 {background-color: #d50404fc;}
+
+/*modulo 2*/
+.modulo.azul {border: 2px solid  rgb(105, 144, 243);}
+.modulo.azul > h3 {background-color:  rgb(105, 144, 243);}
+
+/*modulo 3*/
+.modulo.verde {border: 2px solid  rgb(33, 209, 121);}
+.modulo.verde > h3 {background-color: rgb(33, 209, 121);}
+
+/*modulo 4*/
+.modulo.oliva {border: 2px solid  rgb(34, 106, 40);}
+.modulo.oliva > h3 {background-color: rgb(34, 106, 40);}
+
+/*modulo 5*/
+.modulo.pink {border: 2px solid  rgb(233, 53, 173);}
+.modulo.pink > h3 {background-color: rgb(233, 53, 173);}
+
+/*modulo 6*/
+.modulo.lilás {border: 2px solid  rgba(166, 131, 221, 0.494);}
+.modulo.lilás > h3 {background-color: rgba(166, 131, 221, 0.494);}
+
+/*modulo 7*/
+.modulo.amarelo {border: 2px solid   rgb(250, 193, 4);}
+.modulo.amarelo > h3 {background-color: rgb(250, 193, 4);}
+
+/*modulo 8*/
+.modulo.roxo {border: 2px solid  #67047bb3;}
+.modulo.roxo > h3 {background-color: #67047bb3;}
+
+/*modulo 09*/
+.modulo.marinho {border: 2px solid  rgb(50, 35, 191);}
+.modulo.marinho > h3 {background-color:rgb(50, 35, 191);}
+
+/*modulo 10*/
+.modulo.laranja {border: 2px solid  #f84707fc;}
+.modulo.laranja > h3 {background-color: #f84707fc;}
+
+
+
+
+
+
