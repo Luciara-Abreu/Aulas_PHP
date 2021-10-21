@@ -45,6 +45,7 @@
                         <li><a href="exercicio.php?dir=modulo3&file=a">Exercicio A - Variáveis</a></li>
                         <li><a href="exercicio.php?dir=modulo3&file=b">Exercicio B - Desafio  de Variáveis</a></li>
                         <li><a href="exercicio.php?dir=modulo3&file=c">Exercicio C - Atribuições</li>
+                        <li><a href="exercicio.php?dir=modulo3&file=d">Exercicio D - Interpolaçõa</li>
                         <li><a href="https">Exercicio C</a></li>
                         </li>
                     </ul>
