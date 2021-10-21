@@ -3,7 +3,7 @@
 <?php
 
 
-$title = 'Atribuições';
+echo 'Atribuições';
 echo 'Aqui atribuimos a variável $title o valor de => '.$title;
 echo '<br> --------------------------------------------------------------- <br>';
 
@@ -35,6 +35,24 @@ $numero %=6;
 echo '<br> Variável recebe atibuição de modulo =' . $numero;
 $numero **=4;
 echo '<br> Variável recebe atribuição de potencia =' . $numero;
+echo '<br> --------------------------------------------------------------- <br>';
+echo  'Atribuições de Strings concatenadas';
+echo '<br>';
 
+$texto ='Este é um texto';
+echo '<br>'. $texto;
+$texto = $texto . ' qualquer' ;
+echo '<br>'. $texto;
+$texto =  $texto . ' de verdade.';
+echo '<br>'. $texto;
+
+echo '<br> --------------------------------------------------------------- <br>';
+echo  'Atribuindo valor padrão em uma variável caso ela não exista';
+echo '<br>';
+
+//$variavelInexistente = 'Valor existente';
+///echo '<br>'. $valorInexistente;
+$valor = $valorInexistente ?? 'valor default';
+echo $valor;
 
 ?>
